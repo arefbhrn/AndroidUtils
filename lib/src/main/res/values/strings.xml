@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General words -->
+    <string name="ok">تأیید</string>
+    <string name="cancel">انصراف</string>
+    <string name="confirm">تأیید</string>
+    <string name="go_back">تأیید</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="share">اشتراک گذاری</string>
+
+    <!-- Timestamp Strings -->
+    <string name="time_just_now">همین الان</string>
+    <string name="time_minutes_ago">%s دقیقه پیش</string>
+    <string name="time_hours_ago">%s ساعت پیش</string>
+    <string name="time_yesterday">دیروز</string>
+    <string name="time_days_ago">%s روز پیش</string>
+
+</resources>

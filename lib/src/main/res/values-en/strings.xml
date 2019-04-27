@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General words -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancek</string>
+    <string name="confirm">Confirm</string>
+    <string name="go_back">Back</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="share">Share</string>
+
+    <!-- Timestamp Strings -->
+    <string name="time_just_now">Now</string>
+    <string name="time_minutes_ago">%s minute(s) ago</string>
+    <string name="time_hours_ago">%s hour(s) ago</string>
+    <string name="time_yesterday">yesterday</string>
+    <string name="time_days_ago">%s day(s) ago</string>
+
+</resources>

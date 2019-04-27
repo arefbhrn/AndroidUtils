@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="font_main" translatable="false">font/IRANYekanLightMobile(FaNum).ttf</string>
+    <string name="font_main_bold" translatable="false">font/IRANYekanMobileBold(FaNum).ttf</string>
+
+</resources>

@@ -1,0 +1,69 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.arefbhrn.libraries'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 100
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'utils'
+            description 'Any utils needed for your android applications, is here'
+            url 'https://github.com/arefbhrn/utils'
+            inceptionYear '2018'
+
+            packaging 'aar'
+            groupId 'com.arefbhrn.libraries'
+            artifactId 'utils'
+            version '1.0.6'
+
+            licenses {
+                license {
+                    name 'The Apache License 2.0'
+                    url 'https://opensource.org/licenses/Apache-2.0'
+                }
+            }
+            scm {
+                connection 'https://github.com/arefbhrn/utils'
+                url 'https://github.com/arefbhrn/utils'
+
+            }
+            developers {
+                developer {
+                    id = 'arefbhrn'
+                    name 'Aref Bahreini Nejad'
+                }
+            }
+        }
+    }
+}
+
