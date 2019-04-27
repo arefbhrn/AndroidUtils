@@ -39,12 +39,12 @@ install {
             name 'utils'
             description 'Any utils needed for your android applications, is here'
             url 'https://github.com/arefbhrn/utils'
-            inceptionYear '2018'
+            inceptionYear '2019'
 
             packaging 'aar'
             groupId 'com.arefbhrn.libraries'
             artifactId 'utils'
-            version '1.0.6'
+            version '1.0.0'
 
             licenses {
                 license {
