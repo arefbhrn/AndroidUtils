@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.arefdev.base.ui.custom.RoundedCornerLayout
+            android:id="@+id/rcl"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:backgroundColor="@color/transparent"
+            app:radius="4dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="2dp">
+
+            <com.arefdev.base.ui.custom.IconButton
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:backgroundColor="@color/colorPrimaryDark"
+                app:iconPadding="3dp"
+                app:radius="6dp"
+                app:srcCompat="@drawable/ic_check"
+                app:tint="@color/bg"
+                tools:visibility="gone" />
+
+        </com.arefdev.base.ui.custom.RoundedCornerLayout>
+
+        <com.arefdev.base.ui.custom.CustomTextView
+            android:id="@+id/tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            tools:text="Title" />
+
+    </LinearLayout>
+
+</layout>

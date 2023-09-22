@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lytParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.arefdev.base.ui.custom.CustomTextView
+        android:id="@+id/label"
+        style="@style/headlineRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/title" />
+
+    <com.arefdev.base.ui.custom.RoundedCornerLayout
+        android:id="@+id/lyt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:minHeight="56dp"
+        app:backgroundColor="@color/bg"
+        app:radius="5dp"
+        app:strokeColor="@color/light_gray"
+        app:strokeWidth="1dp">
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingTop="8dp"
+            app:smsp_arrowPaddingLeft="24dp"
+            app:smsp_arrowPaddingRight="32dp"
+            app:smsp_dismissSearchColor="@color/colorPrimary"
+            app:smsp_dismissSearchText="@string/cancel"
+            app:smsp_enableDismissSearch="true"
+            app:smsp_enableErrorLabel="false"
+            app:smsp_enableFloatingLabel="false"
+            app:smsp_enableSearchHeader="true"
+            app:smsp_isRtl="true"
+            app:smsp_isSearchable="false"
+            app:smsp_itemSize="@dimen/text_size_default"
+            app:smsp_multilineError="false"
+            app:smsp_paddingLeftRight="8dp"
+            app:smsp_searchHeaderBackgroundColor="@color/colorPrimaryDark"
+            app:smsp_searchHeaderText="@string/search"
+            app:smsp_searchHint="@string/search"
+            app:smsp_selectedItemListColor="@color/colorPrimaryDark"
+            app:smsp_underlineSize="0dp"
+            tools:smsp_hint="@string/text" />
+
+    </com.arefdev.base.ui.custom.RoundedCornerLayout>
+
+    <LinearLayout
+        android:id="@+id/lytError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <com.arefdev.base.ui.custom.CustomImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_warn"
+            app:tint="@color/red" />
+
+        <com.arefdev.base.ui.custom.CustomTextView
+            android:id="@+id/error"
+            style="@style/textRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            tools:text="@string/error" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -9,6 +9,11 @@
     <string name="yes">بله</string>
     <string name="no">خیر</string>
     <string name="share">اشتراک گذاری</string>
+    <string name="title">عنوان</string>
+    <string name="text">متن</string>
+    <string name="error">خطا</string>
+    <string name="please_wait">لطفاً صبر کنید…</string>
+    <string name="search">جستجو</string>
 
     <!-- Timestamp Strings -->
     <string name="time_just_now">همین الان</string>
@@ -16,5 +21,6 @@
     <string name="time_hours_ago">%s ساعت پیش</string>
     <string name="time_yesterday">دیروز</string>
     <string name="time_days_ago">%s روز پیش</string>
+    <string name="error_happened">خطایی رخ داده است</string>
 
 </resources>

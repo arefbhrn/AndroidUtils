@@ -1,0 +1,87 @@
+<resources>
+
+    <style name="captionRegular">
+        <item name="android:fontFamily">@font/font_family_default</item>
+        <item name="fontFamily">@font/font_family_default</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="captionLight">
+        <item name="android:fontFamily">@font/font_family_default_light</item>
+        <item name="fontFamily">@font/font_family_default_light</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="captionBold">
+        <item name="android:fontFamily">@font/font_family_default_bold</item>
+        <item name="fontFamily">@font/font_family_default_bold</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="textRegular">
+        <item name="android:fontFamily">@font/font_family_default</item>
+        <item name="fontFamily">@font/font_family_default</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="textSize">@dimen/text_size_default</item>
+    </style>
+
+    <style name="textLight">
+        <item name="android:fontFamily">@font/font_family_default_light</item>
+        <item name="fontFamily">@font/font_family_default_light</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="textSize">@dimen/text_size_default</item>
+    </style>
+
+    <style name="textBold">
+        <item name="android:fontFamily">@font/font_family_default_bold</item>
+        <item name="fontFamily">@font/font_family_default_bold</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="textSize">@dimen/text_size_default</item>
+    </style>
+
+    <style name="headlineRegular">
+        <item name="android:fontFamily">@font/font_family_default</item>
+        <item name="fontFamily">@font/font_family_default</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="headlineLight">
+        <item name="android:fontFamily">@font/font_family_default_light</item>
+        <item name="fontFamily">@font/font_family_default_light</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="headlineBold">
+        <item name="android:fontFamily">@font/font_family_default_bold</item>
+        <item name="fontFamily">@font/font_family_default_bold</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="titleRegular">
+        <item name="android:fontFamily">@font/font_family_default</item>
+        <item name="fontFamily">@font/font_family_default</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="titleLight">
+        <item name="android:fontFamily">@font/font_family_default_light</item>
+        <item name="fontFamily">@font/font_family_default_light</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="titleBold">
+        <item name="android:fontFamily">@font/font_family_default_bold</item>
+        <item name="fontFamily">@font/font_family_default_bold</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+</resources>

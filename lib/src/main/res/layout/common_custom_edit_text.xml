@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lytParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal">
+
+        <com.arefdev.base.ui.custom.CustomImageView
+            android:id="@+id/icon"
+            style="@style/headlineRegular"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            tools:srcCompat="@drawable/ic_warn"
+            tools:tint="@color/colorPrimaryDark" />
+
+        <com.arefdev.base.ui.custom.CustomTextView
+            android:id="@+id/tvLabel"
+            style="@style/headlineRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            tools:text="@string/title" />
+
+    </LinearLayout>
+
+    <com.arefdev.base.ui.custom.RoundedCornerLayout
+        android:id="@+id/lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundColor="@color/bg"
+        app:radius="6dp"
+        app:strokeColor="@color/semi_light_gray"
+        app:strokeWidth="1dp">
+
+        <com.arefdev.base.ui.custom.CustomTextInputEditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="16dp" />
+
+    </com.arefdev.base.ui.custom.RoundedCornerLayout>
+
+    <LinearLayout
+        android:id="@+id/lytError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layoutDirection="rtl"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <com.arefdev.base.ui.custom.CustomImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_warn"
+            app:tint="@color/red" />
+
+        <com.arefdev.base.ui.custom.CustomTextView
+            android:id="@+id/tv_error"
+            style="@style/textRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            tools:text="@string/error" />
+
+    </LinearLayout>
+
+</LinearLayout>

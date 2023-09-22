@@ -9,6 +9,11 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="share">Share</string>
+    <string name="title">Title</string>
+    <string name="text">Text</string>
+    <string name="error">Error</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="search">Search</string>
 
     <!-- Timestamp Strings -->
     <string name="time_just_now">Now</string>
@@ -16,5 +21,6 @@
     <string name="time_hours_ago">%s hour(s) ago</string>
     <string name="time_yesterday">yesterday</string>
     <string name="time_days_ago">%s day(s) ago</string>
+    <string name="error_happened">Error happened</string>
 
 </resources>

@@ -1,0 +1,7 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:drawable="@drawable/ic_arrow_down_keyboard"
+            android:fromDegrees="180" />
+    </item>
+</layer-list>

@@ -1,69 +1,205 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'org.lsposed.lsparanoid'
+    id 'maven-publish'
+}
 
 group = 'com.arefbhrn.libraries'
 
+
 android {
-    compileSdkVersion 28
+    namespace 'com.arefdev.base'
+
+    compileSdk 34
+
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 28
-        versionCode 100
-        versionName "1.0.0"
+        minSdk 21
+        targetSdk 34
+        versionCode 200
+        versionName "2.0.0"
+
+        aarMetadata {
+            minCompileSdk 34
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
 
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    testFixtures {
+        enable false
+    }
+
+    splits {
+        abi {
+            enable false
+            reset()
+            // Specify a list of ABIs that Gradle should create APKs for
+            include 'x86', 'x86_64', 'arm64-v8a', 'armeabi-v7a'
+            // If you don’t want to generate a universal APK that includes all ABIs.
+            universalApk true
         }
+//        density {
+//            enable true
+//            // Specify a list of screen densities which Gradle won't create multiple APKs for
+//            exclude 'ldpi', 'mdpi'
+//            // Specify a list of compatible screen size for the manifest
+//            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+//        }
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:support-v4:28.0.0'
-    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "com.google.android.material:material:1.9.0"
+    implementation "androidx.core:core-splashscreen:1.0.1"
+    implementation "androidx.leanback:leanback:1.0.0"
+    implementation "androidx.webkit:webkit:1.8.0"
+    implementation "androidx.browser:browser:1.6.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation "androidx.recyclerview:recyclerview:1.3.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation "androidx.drawerlayout:drawerlayout:1.2.0"
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation "com.google.android:flexbox:2.0.1"
+
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
+
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.10"))
+
+    // Lifecycle
+    def verLifecycle = "2.6.2"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:$verLifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$verLifecycle"
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$verLifecycle"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$verLifecycle"
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$verLifecycle"
+    // Annotation processor
+    implementation "androidx.lifecycle:lifecycle-common-java8:$verLifecycle"
+    // Helpers for implementing LifecycleOwner in a Service
+    implementation "androidx.lifecycle:lifecycle-service:$verLifecycle"
+    // ProcessLifecycleOwner provides a lifecycle for the whole application process
+    implementation "androidx.lifecycle:lifecycle-process:$verLifecycle"
+    // Test helpers for LiveData
+//    testImplementation "androidx.arch.core:core-testing:2.2.0"
+
+    // Fragment
+    def verFragment = "1.6.1"
+    implementation "androidx.fragment:fragment-ktx:$verFragment"
+//    debugImplementation "androidx.fragment:fragment-testing:$verFragment"
+
+    def verWork = "2.8.1"
+    // (Java only)
+    implementation "androidx.work:work-runtime:$verWork"
+    // Kotlin + coroutines
+    implementation "androidx.work:work-runtime-ktx:$verWork"
+    // optional - RxJava2 support
+    implementation "androidx.work:work-rxjava3:$verWork"
+    // optional - GCMNetworkManager support
+    implementation "androidx.work:work-gcm:$verWork"
+    // optional - Test helpers
+//    androidTestImplementation "androidx.work:work-testing:$verWork"
+    // optional - Multi-Process support
+    implementation "androidx.work:work-multiprocess:$verWork"
+
+    implementation "com.jakewharton.timber:timber:5.0.1"
+
+    implementation "io.reactivex.rxjava3:rxjava:3.1.7"
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.2"
+//    implementation "io.reactivex.rxjava3:rxkotlin:3.1.0"
+
+    implementation "com.google.code.gson:gson:2.10.1"
+
+    // Retrofit
+    def verRetrofit = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$verRetrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11"
+    implementation "com.squareup.retrofit2:converter-scalars:$verRetrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$verRetrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$verRetrofit"
+
+    def verGlide = "4.16.0"
+    implementation "com.github.bumptech.glide:glide:$verGlide"
+    kapt "com.github.bumptech.glide:compiler:$verGlide"
+
+    def verRoom = "2.5.2"
+    implementation "androidx.room:room-runtime:$verRoom"
+    kapt "androidx.room:room-compiler:$verRoom"
+    implementation "androidx.room:room-rxjava3:$verRoom"    // optional - RxJava3 support for Room
+    implementation "androidx.room:room-guava:$verRoom"    // optional - Guava support for Room, including Optional and ListenableFuture
+    testImplementation "androidx.room:room-testing:$verRoom"    // optional - Test helpers
+    implementation "androidx.room:room-paging:$verRoom"    // optional - Paging 3 Integration
+
+    implementation "com.github.tonyofrancis.Fetch:xfetch2:3.1.6"
+
+    implementation "com.jaredrummler:ktsh:1.0.0"
+
+    implementation "com.github.stfalcon:stfalcon-imageviewer:1.0.10"
+    implementation "net.cachapa.expandablelayout:expandablelayout:2.9.2"
+    implementation "com.scottyab:secure-preferences-lib:0.1.7"
+    implementation "com.github.chivorns:smartmaterialspinner:1.5.0"
+    implementation "com.github.Dimezis:BlurView:version-2.0.2"
 }
 
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            name 'utils'
+publishing {
+    publications {
+        release(MavenPublication) {
             description 'Any utils needed for your android applications, is here'
-            url 'https://github.com/arefbhrn/utils'
-            inceptionYear '2019'
-
-            packaging 'aar'
-            groupId 'com.arefbhrn.libraries'
-            artifactId 'utils'
-            version '1.0.0'
-
-            licenses {
-                license {
-                    name 'The Apache License 2.0'
-                    url 'https://opensource.org/licenses/Apache-2.0'
+            groupId = 'com.arefbhrn.libraries'
+            artifactId = 'base'
+            version = '2.0.0'
+//            artifact(sourcesJar)
+            artifact("$buildDir/outputs/aar/AndroidUtils-release.aar") {
+//                classifier 'production'
+                extension 'aar'
+            }
+            pom {
+                name.set("AndroidUtils")
+                description.set('Any utils needed for your android applications, is here')
+                url.set("https://github.com/arefbhrn/AndroidUtils")
+                licenses {
+                    license {
+                        name.set("The Apache License 2.0")
+                        url.set("https://opensource.org/licenses/Apache-2.0")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("arefbhrn")
+                        name.set("Aref Bahreini Nejad")
+                    }
                 }
             }
-            scm {
-                connection 'https://github.com/arefbhrn/utils'
-                url 'https://github.com/arefbhrn/utils'
 
-            }
-            developers {
-                developer {
-                    id = 'arefbhrn'
-                    name 'Aref Bahreini Nejad'
-                }
+            afterEvaluate {
+                from components.release
             }
         }
     }
 }
-

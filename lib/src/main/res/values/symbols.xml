@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="circle_small" translatable="false">•</string>
+    <string name="circle_medium" translatable="false">●</string>
+    <string name="circle_big" translatable="false">⬤</string>
+    <string name="circle_big_black" translatable="false">⚫</string>
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="NestedWeights,SpUsage,ContentDescription,RtlSymmetry">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.arefdev.base.ui.custom.RoundedCornerLayout
+            android:id="@+id/lyt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:backgroundColor="@color/transparent"
+            app:radius="5dp"
+            app:strokeColor="@color/light_gray"
+            app:strokeWidth="1dp">
+
+            <com.arefdev.base.ui.custom.CustomImageView
+                android:id="@+id/icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_down_keyboard" />
+
+            <com.arefdev.base.ui.custom.CustomTextView
+                android:id="@+id/tvText"
+                style="@style/textRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toStartOf="@id/icon"
+                android:background="@android:color/transparent"
+                android:minWidth="10dp"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/text" />
+
+        </com.arefdev.base.ui.custom.RoundedCornerLayout>
+
+        <LinearLayout
+            android:id="@+id/lytError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <com.arefdev.base.ui.custom.CustomImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_warn"
+                app:tint="@color/red" />
+
+            <com.arefdev.base.ui.custom.CustomTextView
+                android:id="@+id/error"
+                style="@style/textRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg"
+                android:textColor="@color/red"
+                tools:text="@string/error" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.arefdev.base.ui.custom.CustomTextView
+        android:id="@+id/label"
+        style="@style/captionRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:background="@color/bg"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        tools:text="@string/title" />
+
+</RelativeLayout>

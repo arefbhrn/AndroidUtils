@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="max"
+            type="Integer" />
+
+        <variable
+            name="progress"
+            type="Integer" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="@{max == null}"
+            android:progress="@{progress}"
+            app:indicatorColor="@color/colorPrimaryDark"
+            tools:indeterminate="false"
+            tools:max="100"
+            tools:progress="70"
+            tools:trackColor="@color/colorPrimaryLight" />
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.arefdev.base.ui.custom.RoundedCornerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="8dp"
+    app:backgroundColor="@color/colorPrimary"
+    app:radius="8dp"
+    app:strokeColor="@color/border"
+    app:strokeWidth="1dp">
+
+    <com.arefdev.base.ui.custom.CustomTextView
+        android:id="@+id/tv"
+        style="@style/textBold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/actionActive"
+        tools:text="@string/title" />
+
+</com.arefdev.base.ui.custom.RoundedCornerLayout>

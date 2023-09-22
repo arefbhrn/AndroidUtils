@@ -1,0 +1,295 @@
+<resources>
+
+    <declare-styleable name="MyToolbar">
+        <attr name="android:background" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="backButtonVisibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="4" />
+            <enum name="gone" value="8" />
+        </attr>
+        <attr name="secondaryText" format="string" />
+        <attr name="secondaryTextColor" format="reference|color" />
+        <attr name="secondaryTextSize" format="dimension" />
+        <attr name="secondaryTextVisibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="4" />
+            <enum name="gone" value="8" />
+        </attr>
+        <attr name="secondaryIcon" format="reference" />
+        <attr name="secondaryIconVisibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="4" />
+            <enum name="gone" value="8" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TitledEditText">
+        <attr name="labelText" format="string" />
+        <attr name="labelTextColor" format="color" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="textBackground" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:gravity" />
+        <attr name="textGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="fill_vertical" value="0x70" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="fill_horizontal" value="0x07" />
+            <flag name="center" value="0x11" />
+            <flag name="fill" value="0x77" />
+            <flag name="clip_vertical" value="0x80" />
+            <flag name="clip_horizontal" value="0x08" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="android:hint" />
+        <attr name="android:textColorHint" />
+        <attr name="android:imeOptions" />
+        <attr name="android:maxLength" />
+        <attr name="android:lines" />
+        <attr name="android:minLines" />
+        <attr name="android:maxLines" />
+        <attr name="android:inputType" />
+        <attr name="android:enabled" />
+        <attr name="icon" />
+        <attr name="error" format="string" />
+        <attr name="editable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CirclePickerView">
+        <!-- Wheel related attributes -->
+        <attr name="cpv_wheelRadius" format="dimension|reference" />
+        <attr name="cpv_wheelStrokeWidth" format="dimension|reference" />
+        <attr name="cpv_wheelActiveColor" format="color|reference" />
+        <attr name="cpv_wheelBackgroundColor" format="color|reference" />
+        <attr name="cpv_wheelRotation" format="integer" />
+        <!-- Divider related attributes -->
+        <attr name="cpv_showDivider" format="boolean" />
+        <attr name="cpv_dividerColor" format="color|reference" />
+        <attr name="cpv_dividerWidth" format="dimension|reference" />
+        <!-- Pointer related attributes -->
+        <attr name="cpv_showPointer" format="boolean" />
+        <attr name="cpv_pointerRadius" format="dimension|reference" />
+        <attr name="cpv_pointerColor" format="color|reference" />
+        <attr name="cpv_pointerHaloColor" format="color|reference" />
+        <attr name="cpv_pointerHaloWidth" format="dimension|reference" />
+        <!-- Text related attributes -->
+        <attr name="cpv_showValueText" format="boolean" />
+        <attr name="cpv_textSize" format="dimension|reference" />
+        <attr name="cpv_textColor" format="color|reference" />
+        <!-- Label related attributes -->
+        <attr name="cpv_labelPosition">
+            <enum name="none" value="0" />
+            <enum name="above" value="1" />
+            <enum name="below" value="2" />
+            <enum name="start" value="3" />
+            <enum name="end" value="4" />
+        </attr>
+        <attr name="cpv_labelSize" format="dimension|reference" />
+        <attr name="cpv_labelColor" format="color|reference" />
+        <attr name="cpv_label" format="string" />
+        <!-- Misc attributes -->
+        <attr name="cpv_max" format="float" />
+        <attr name="cpv_min" format="float" />
+        <attr name="cpv_cycleValue" format="float">
+            <enum name="cpv_auto" value="0" />
+        </attr>
+        <attr name="cpv_step" format="float" />
+        <attr name="cpv_value" format="integer" />
+        <attr name="cpv_interactive" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TitledTextView">
+        <attr name="labelText" />
+        <attr name="labelTextColor" />
+        <attr name="labelTextSize" />
+        <attr name="unitText" format="string" />
+        <attr name="unitTextColor" format="color" />
+        <attr name="unitTextSize" format="dimension" />
+        <attr name="textBackground" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:hint" />
+        <attr name="android:textColorHint" />
+        <attr name="android:imeOptions" />
+        <attr name="android:maxLength" />
+        <attr name="android:lines" />
+        <attr name="android:minLines" />
+        <attr name="android:maxLines" />
+        <attr name="android:inputType" />
+        <attr name="android:enabled" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="capitalize">
+            <!-- Don't automatically capitalize anything. -->
+            <enum name="none" value="0" />
+            <!-- Capitalize the first word of each sentence. -->
+            <enum name="sentences" value="1" />
+            <!-- Capitalize the first letter of every word. -->
+            <enum name="words" value="2" />
+            <!-- Capitalize every character. -->
+            <enum name="characters" value="3" />
+        </attr>
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:letterSpacing" />
+        <attr name="android:singleLine" />
+        <attr name="android:ellipsize" />
+        <attr name="android:marqueeRepeatLimit" />
+        <attr name="selected" format="boolean" />
+        <attr name="strikethrough" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="url" format="string" />
+        <attr name="placeholder" format="reference" />
+        <attr name="openable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedButton">
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:fontFamily" />
+        <attr name="capitalize" />
+    </declare-styleable>
+
+    <declare-styleable name="RequestStatusTagView">
+        <attr name="backgroundColor" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" />
+        <attr name="status" format="string" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedCornerLayout">
+        <attr name="android:enabled" />
+        <attr name="radius" format="dimension" />
+        <attr name="radiusTopLeft" format="dimension" />
+        <attr name="radiusTopRight" format="dimension" />
+        <attr name="radiusBottomRight" format="dimension" />
+        <attr name="radiusBottomLeft" format="dimension" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeDashWidth" format="dimension" />
+        <attr name="strokeDashGap" format="dimension" />
+        <attr name="backgroundColor" />
+        <attr name="rippleColor" />
+    </declare-styleable>
+
+    <declare-styleable name="IconButton">
+        <attr name="backgroundColor" />
+        <attr name="srcCompat" />
+        <attr name="tint" />
+        <attr name="radius" />
+        <attr name="elevation" />
+        <attr name="iconPadding" />
+    </declare-styleable>
+
+    <declare-styleable name="PlaceholderTextView">
+        <attr name="placeholderStrokeColor" format="color" />
+        <attr name="placeholderBackgroundColor" format="color" />
+        <attr name="placeholderTextColor" />
+        <attr name="strokeColor" />
+        <attr name="backgroundColor" />
+        <attr name="placeholderText" />
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="fontFamily" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectableTextView">
+        <attr name="isActive" format="boolean" />
+        <attr name="inactiveStrokeColor" format="color" />
+        <attr name="inactiveBackgroundColor" format="color" />
+        <attr name="inactiveTextColor" format="color" />
+        <attr name="activeStrokeColor" format="color" />
+        <attr name="activeBackgroundColor" format="color" />
+        <attr name="activeTextColor" format="color" />
+        <attr name="text" />
+        <attr name="textSize" />
+        <attr name="textGravity" />
+        <attr name="fontFamily" />
+    </declare-styleable>
+
+    <declare-styleable name="DetailedSelectableTextView">
+        <attr name="isActive" />
+        <attr name="inactiveStrokeColor" />
+        <attr name="inactiveBackgroundColor" />
+        <attr name="inactiveTextColor" />
+        <attr name="activeStrokeColor" />
+        <attr name="activeBackgroundColor" />
+        <attr name="activeTextColor" />
+        <attr name="text" />
+        <attr name="fontFamily" />
+        <attr name="desc" format="string" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="descTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarDayButton">
+        <attr name="isSelectable" format="boolean" />
+        <attr name="day" format="string" />
+        <attr name="date" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextInputEditText">
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingRight" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingBottom" />
+        <attr name="android:lines" />
+        <attr name="android:maxLines" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCheckBox">
+        <attr name="android:text" />
+        <attr name="android:checked" />
+        <attr name="android:textColorLink" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomSpinner">
+        <attr name="android:title" />
+        <attr name="android:hint" />
+        <attr name="android:entries" />
+        <attr name="android:enabled" />
+        <attr name="error" />
+        <attr name="alwaysSelected" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="labelText" />
+        <attr name="labelTextColor" />
+        <attr name="labelTextSize" />
+        <attr name="textBackground" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:gravity" />
+        <attr name="textGravity" />
+        <attr name="android:hint" />
+        <attr name="android:textColorHint" />
+        <attr name="android:imeOptions" />
+        <attr name="android:maxLength" />
+        <attr name="android:lines" />
+        <attr name="android:minLines" />
+        <attr name="android:maxLines" />
+        <attr name="android:inputType" />
+        <attr name="android:enabled" />
+        <attr name="icon" />
+        <attr name="error"  />
+        <attr name="editable"  />
+    </declare-styleable>
+
+</resources>

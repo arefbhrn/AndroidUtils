@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="NestedWeights,SpUsage,ContentDescription,RtlSymmetry">
+
+    <com.arefdev.base.ui.custom.RoundedCornerLayout
+        android:id="@+id/rclBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layoutDirection="rtl"
+        app:backgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="16dp">
+
+        <com.arefdev.base.ui.custom.CustomImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tvName"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close"
+            app:tint="@color/colorPrimaryLight" />
+
+        <com.arefdev.base.ui.custom.CustomTextView
+            android:id="@+id/tvName"
+            style="@style/captionRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:paddingEnd="10dp"
+            android:textColor="@color/colorPrimaryLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/lorem_ipsum" />
+
+    </com.arefdev.base.ui.custom.RoundedCornerLayout>
+
+</layout>
